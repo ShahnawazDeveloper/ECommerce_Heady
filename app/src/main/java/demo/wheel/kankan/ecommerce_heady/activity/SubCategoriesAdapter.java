@@ -1,6 +1,7 @@
 package demo.wheel.kankan.ecommerce_heady.activity;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.AppCompatImageView;
@@ -92,8 +93,10 @@ public class SubCategoriesAdapter extends RecyclerView.Adapter<SubCategoriesAdap
                 if (mData.isExpanded()) {
                     selectedItem = getAdapterPosition();
                     rvSubCategory.setVisibility(View.VISIBLE);
+                    tvCategoryName.setTypeface(null, Typeface.BOLD);
                 } else {
                     rvSubCategory.setVisibility(View.GONE);
+                    tvCategoryName.setTypeface(null, Typeface.NORMAL);
                 }
             }
         }
@@ -124,6 +127,7 @@ public class SubCategoriesAdapter extends RecyclerView.Adapter<SubCategoriesAdap
             //recyclerView.scrollToPosition(getAdapterPosition());
             if (holder != null) {
                 holder.rvSubCategory.setVisibility(View.GONE);
+                holder.tvCategoryName.setTypeface(null, Typeface.NORMAL);
                 // holder.iv_arrow.setImageResource(R.drawable.ic_arrow_down);
                 mDataSet.get(selectedItem).setExpanded(false);
             }
@@ -134,18 +138,14 @@ public class SubCategoriesAdapter extends RecyclerView.Adapter<SubCategoriesAdap
                 selectedItem = UNSELECTED;
                 mDataSet.get(position).setExpanded(false);
                 rvSubCategory.setVisibility(View.GONE);
-                /*if (el_comment.isExpanded()) {
-                    el_comment.collapse();
-                    iv_arrow.setImageResource(R.drawable.ic_arrow_down);
-                }*/
+                tvCategoryName.setTypeface(null, Typeface.NORMAL);
             } else {
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                       /* el_comment.expand();
-                        iv_arrow.setImageResource(R.drawable.ic_arrow_up);*/
                         rvSubCategory.setVisibility(View.VISIBLE);
+                        tvCategoryName.setTypeface(null, Typeface.BOLD);
                         selectedItem = position;
                         mDataSet.get(position).setExpanded(true);
                     }

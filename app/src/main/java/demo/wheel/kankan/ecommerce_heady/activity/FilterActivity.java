@@ -111,7 +111,7 @@ public class FilterActivity extends AppCompatActivity {
     }
 
 
-    @OnClick({R.id.tv_size, R.id.tv_color, R.id.btn_filter})
+    @OnClick({R.id.tv_size, R.id.tv_color, R.id.btn_filter, R.id.btn_clear})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_size:
@@ -123,12 +123,34 @@ public class FilterActivity extends AppCompatActivity {
                 setProductsAdapter(colorFilterList, false);
                 break;
             case R.id.btn_filter:
-                Intent intent = new Intent();
-                intent.putExtra("colorFilter", (Serializable) colorFilterList);
-                intent.putExtra("sizeFilter", (Serializable) sizeFilterList);
-                setResult(Activity.RESULT_OK, intent);
-                finish();
+                setResult();
                 break;
+            case R.id.btn_clear:
+                resetData();
+                setResult();
+                break;
+        }
+    }
+
+    private void setResult() {
+        Intent intent = new Intent();
+        intent.putExtra("colorFilter", (Serializable) colorFilterList);
+        intent.putExtra("sizeFilter", (Serializable) sizeFilterList);
+        setResult(Activity.RESULT_OK, intent);
+        finish();
+    }
+
+    private void resetData() {
+        if (colorFilterList != null && !colorFilterList.isEmpty()) {
+            for (FilterModel filterModel : colorFilterList) {
+                filterModel.setSelected(false);
+            }
+        }
+
+        if (sizeFilterList != null && !sizeFilterList.isEmpty()) {
+            for (FilterModel filterModel : sizeFilterList) {
+                filterModel.setSelected(false);
+            }
         }
     }
 

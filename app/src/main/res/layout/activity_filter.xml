@@ -8,18 +8,31 @@
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/tv_title"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/dim_10"
         android:text="@string/text_filter"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/text_size_14" />
+        android:textSize="@dimen/text_size_16" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button_border"
+        android:padding="@dimen/dim_10"
+        android:text="@string/text_clear"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_12" />
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dim_1"
-        android:layout_below="@id/tv_title"
+        android:layout_below="@id/btn_clear"
+        android:layout_marginTop="@dimen/dim_5"
         android:background="@color/color_item_separator" />
 
     <LinearLayout

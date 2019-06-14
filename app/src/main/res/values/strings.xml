@@ -28,4 +28,6 @@
     <string name="text_orders"> <![CDATA[Orders :<b>%1$s</b>]]></string>
     <string name="text_variants_info">Variants Info</string>
     <string name="title_categories">Categories</string>
+    <string name="text_clear">clear</string>
+    <string name="text_no_data_found">No data found</string>
 </resources>

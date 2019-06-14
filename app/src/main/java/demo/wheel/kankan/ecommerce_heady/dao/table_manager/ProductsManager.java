@@ -205,29 +205,47 @@ public class ProductsManager {
 
             queryBuilder.where(ProductDao.Properties.Category_id.eq(categoryId));
 
+            List<String> sizeList = new ArrayList<>();
+            List<String> colorList = new ArrayList<>();
             if (productsViewModel.getColorFilterList() != null) {
-                List<String> colorList = StreamSupport.stream(productsViewModel.getColorFilterList())
+                colorList = StreamSupport.stream(productsViewModel.getColorFilterList())
                         .filter(FilterModel::isSelected)
                         .map(e -> e.getVariant().getColor())
                         .collect(Collectors.toList());
 
-                if (colorList != null && !colorList.isEmpty()) {
+                /*if (colorList != null && !colorList.isEmpty()) {
                     queryBuilder.join(ProductDao.Properties.Product_id, Variant.class, VariantDao.Properties.Product_id)
                             .where(VariantDao.Properties.Color.in(colorList));
-                }
+                }*/
             }
 
             if (productsViewModel.getSizeFilterList() != null) {
-                List<String> sizeList = StreamSupport.stream(productsViewModel.getSizeFilterList())
+                sizeList = StreamSupport.stream(productsViewModel.getSizeFilterList())
                         .filter(FilterModel::isSelected)
                         .map(e -> e.getVariant().getSize())
                         .collect(Collectors.toList());
 
-                if (sizeList != null && !sizeList.isEmpty()) {
+                /*if (sizeList != null && !sizeList.isEmpty()) {
                     queryBuilder.join(ProductDao.Properties.Product_id, Variant.class, VariantDao.Properties.Product_id)
                             .where(VariantDao.Properties.Size.in(sizeList));
-                }
+                }*/
             }
+
+            if (sizeList != null && !sizeList.isEmpty() && colorList != null && !colorList.isEmpty()) {
+                queryBuilder.join(ProductDao.Properties.Product_id, Variant.class, VariantDao.Properties.Product_id)
+                        .where(VariantDao.Properties.Size.in(sizeList),
+                                VariantDao.Properties.Color.in(colorList));
+            } else if (colorList != null && !colorList.isEmpty()) {
+                queryBuilder.join(ProductDao.Properties.Product_id, Variant.class, VariantDao.Properties.Product_id)
+                        .where(VariantDao.Properties.Color.in(colorList));
+            } else if (sizeList != null && !sizeList.isEmpty()) {
+                queryBuilder.join(ProductDao.Properties.Product_id, Variant.class, VariantDao.Properties.Product_id)
+                        .where(VariantDao.Properties.Size.in(sizeList));
+            }
+
+           /* queryBuilder.join(ProductDao.Properties.Product_id, Variant.class, VariantDao.Properties.Product_id)
+                    .where(VariantDao.Properties.Size.in(sizeList),
+                            VariantDao.Properties.Color.in(colorList));*/
 
             if (rankingEnum != null) {
                 switch (rankingEnum) {
@@ -246,11 +264,9 @@ public class ProductsManager {
             //queryBuilder.build()
             queryBuilder.distinct();
             List<Product> productList = queryBuilder.list();
-
+            List<ProductListingModel> productListingModelList = new ArrayList<>();
 
             if (productList != null && !productList.isEmpty()) {
-                List<ProductListingModel> productListingModelList = new ArrayList<>();
-
                 for (Product product : productList) {
                     ProductListingModel productListingModel = new ProductListingModel();
                     productListingModel.setProduct(product);
@@ -260,9 +276,8 @@ public class ProductsManager {
 
                     productListingModelList.add(productListingModel);
                 }
-
-                productsViewModel.setProductListingModelList(productListingModelList);
             }
+            productsViewModel.setProductListingModelList(productListingModelList);
 
             return productsViewModel;
 

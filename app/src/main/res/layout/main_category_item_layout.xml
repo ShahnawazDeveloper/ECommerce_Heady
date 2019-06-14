@@ -25,7 +25,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/text_size_16" />
+            android:textSize="@dimen/text_size_18" />
 
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/img_next"
