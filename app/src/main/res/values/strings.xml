@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">ECommerce_Heady</string>
+
+
+    <!--Error message-->
+    <string name="msg_NO_INTERNET_TITLE">Internet connection required</string>
+    <string name="msg_NO_INTERNET_MSG">You need an active internet connection to access this feature of the app.</string>
+    <string name="msg_goto_settings">SETTINGS</string>
+    <string name="msg_server_error">The server might be down, please try again later.</string>
+    <string name="error_msg_connection_timeout">The request timed out please try again.</string>
+    <string name="msg_no_internet_connection">Please check your internet connection.</string>
+    <string name="msg_something_want_wrong">Something went wrong please try again later.</string>
+    <string name="text_filter">Filter</string>
+    <string name="text_ranking">Ranking</string>
+    <string name="text_sort">Sort</string>
+    <string name="text_size">Size</string>
+    <string name="text_color">Color</string>
+
+    <string name="text_sizes">Sizes</string>
+    <string name="text_colors">Colors</string>
+
+
+    <string name="text_avail_variants">Available Variants</string>
+
+    <string name="set_color_and_size">  <![CDATA[Color <b>%1$s</b>, Size <b>%2$s</b>]]></string>
+    <string name="set_color"> <![CDATA[Color <b>%1$s</b>]]></string>
+    <string name="text_prize"> <![CDATA[Rs. <b>%1$s</b>]]></string>
+    <string name="text_orders"> <![CDATA[Orders :<b>%1$s</b>]]></string>
+    <string name="text_variants_info">Variants Info</string>
+    <string name="title_categories">Categories</string>
 </resources>

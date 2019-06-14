@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dim_15">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dim_10"
+        android:text="@string/text_filter"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_14" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_1"
+        android:layout_below="@id/tv_title"
+        android:background="@color/color_item_separator" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_filter"
+        android:layout_below="@id/view"
+        android:layout_marginTop="@dimen/dim_10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dim_5"
+                android:paddingBottom="@dimen/dim_5"
+                android:text="@string/text_color"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_1"
+                android:background="@color/color_item_separator" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dim_5"
+                android:paddingBottom="@dimen/dim_5"
+                android:text="@string/text_size"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dim_1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_3"
+            android:layout_marginLeft="@dimen/dim_3"
+            android:layout_marginEnd="@dimen/dim_3"
+            android:layout_marginRight="@dimen/dim_3"
+            android:background="@color/color_item_separator" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_filter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/text_filter"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_14" />
+
+</RelativeLayout>

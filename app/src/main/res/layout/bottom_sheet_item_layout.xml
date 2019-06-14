@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/dim_15"
+        android:paddingBottom="@dimen/dim_15"
+        android:text="Most Viewed Products"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_14" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_prize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dim_15"
+        android:paddingBottom="@dimen/dim_15"
+        android:text="Most Viewed Products"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_14"
+        android:visibility="gone" />
+
+</LinearLayout>
+
+

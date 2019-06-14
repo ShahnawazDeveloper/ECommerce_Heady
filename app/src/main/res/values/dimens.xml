@@ -1,0 +1,91 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <dimen name="design_navigation_separator_vertical_padding" tools:override="true">0dp</dimen>
+    <item name="header_text_weight" format="float" type="dimen">1.5</item>
+
+    <dimen name="dim_0_5">0.5dp</dimen>
+    <dimen name="dim_1">1dp</dimen>
+    <dimen name="dim_2">2dp</dimen>
+    <dimen name="dim_3">3dp</dimen>
+    <dimen name="dim_4">4dp</dimen>
+    <dimen name="dim_5">5dp</dimen>
+    <dimen name="dim_6">6dp</dimen>
+    <dimen name="dim_7">7dp</dimen>
+    <dimen name="dim_8">8dp</dimen>
+    <dimen name="dim_9">9dp</dimen>
+    <dimen name="dim_10">10dp</dimen>
+    <dimen name="dim_12">12dp</dimen>
+    <dimen name="dim_13">13dp</dimen>
+    <dimen name="dim_14">14dp</dimen>
+    <dimen name="dim_15">15dp</dimen>
+    <dimen name="dim_16">16dp</dimen>
+    <dimen name="dim_17">17dp</dimen>
+    <dimen name="dim_18">18dp</dimen>
+    <dimen name="dim_20">20dp</dimen>
+    <dimen name="dim_22">22dp</dimen>
+    <dimen name="dim_23">23dp</dimen>
+    <dimen name="dim_24">24dp</dimen>
+    <dimen name="dim_25">25dp</dimen>
+    <dimen name="dim_28">28dp</dimen>
+    <dimen name="dim_30">30dp</dimen>
+    <dimen name="dim_32">32dp</dimen>
+    <dimen name="dim_34">34dp</dimen>
+    <dimen name="dim_35">35dp</dimen>
+    <dimen name="dim_36">36dp</dimen>
+    <dimen name="dim_37">37dp</dimen>
+    <dimen name="dim_40">40dp</dimen>
+    <dimen name="dim_42">42dp</dimen>
+    <dimen name="dim_45">45dp</dimen>
+    <dimen name="dim_46">46dp</dimen>
+    <dimen name="dim_48">48dp</dimen>
+    <dimen name="dim_50">50dp</dimen>
+    <dimen name="dim_55">55dp</dimen>
+    <dimen name="dim_60">60dp</dimen>
+    <dimen name="dim_65">65dp</dimen>
+    <dimen name="dim_70">70dp</dimen>
+    <dimen name="dim_76">76dp</dimen>
+    <dimen name="dim_75">75dp</dimen>
+    <dimen name="dim_80">80dp</dimen>
+    <dimen name="dim_85">85dp</dimen>
+    <dimen name="dim_90">90dp</dimen>
+    <dimen name="dim_96">96dp</dimen>
+    <dimen name="dim_100">100dp</dimen>
+    <dimen name="dim_105">105dp</dimen>
+    <dimen name="dim_120">120dp</dimen>
+    <dimen name="dim_130">130dp</dimen>
+    <dimen name="dim_150">150dp</dimen>
+    <dimen name="dim_157">157dp</dimen>
+    <dimen name="dim_168">168dp</dimen>
+    <dimen name="dim_172">172dp</dimen>
+    <dimen name="dim_175">175dp</dimen>
+    <dimen name="dim_185">185dp</dimen>
+    <dimen name="dim_200">200dp</dimen>
+    <dimen name="dim_220">220dp</dimen>
+    <dimen name="dim_300">300dp</dimen>
+
+    <dimen name="dim_map_185">185dp</dimen>
+
+    <!--for text size-->
+    <dimen name="text_size_8">8sp</dimen>
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_11">11sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+    <dimen name="text_size_45">45sp</dimen>
+
+    <!--media picker-->
+    <dimen name="picker_photo_size">100dp</dimen>
+    <dimen name="picker_photo_spacing">4dp</dimen>
+    <dimen name="picker_border_size">3dp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
+
+</resources>
